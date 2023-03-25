@@ -14,10 +14,11 @@
     box-sizing: inherit;
 }
 
-.active{
+.active {
     /*fill: var(--gold-color);*/
     background-color: var(--gold-color);
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -990,6 +991,7 @@ textarea {
     .title-video {
         margin-top: 80px;
     }
+
     .player-button {
         height: 5px;
         padding: 5px;
@@ -1097,7 +1099,7 @@ textarea {
     }
 
     .contacts-container {
-         margin: 0 auto;
+        margin: 0 auto;
     }
 
     .contacts {
@@ -1138,3 +1140,119 @@ textarea {
     }
 }
 
+@media (max-width: 320px) {
+    .container {
+        max-width: 320px;
+    }
+
+    .icon {
+        margin-left: 10px;
+    }
+
+    .lang {
+        margin-left: auto;
+        padding-right: 5px;
+    }
+
+    #lang-ru {
+        padding: 0px 5px;
+    }
+
+    /* hamburger */
+    .hamburger {
+        margin-right: 10px;
+        margin-left: 30px;
+        width: 40px;
+    }
+
+    .hero-text {
+        line-height: 20px;
+        margin-left: 30px;
+    }
+
+    .hero-text p {
+        width: 260px;
+        margin: 20px 30px 10px 0px;
+    }
+
+    button {
+        margin: 30px 0px;
+    }
+
+    .skills-items {
+        flex-wrap: wrap;
+        padding: 0px 30px 5px 30px;
+    }
+
+    .skills-item {
+        margin: 20px auto;
+    }
+
+    .section-title::before {
+        right: 100px;
+    }
+
+    .section-title::after {
+        left: 100px;
+    }
+
+    .portfolio .section-title::before {
+        right: 150px;
+    }
+
+    .portfolio .section-title::after {
+        left: 150px;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(1, 25%);
+        grid-template-rows: repeat(4, 25%);
+        gap: 5px;
+        margin: 60px 130px;
+    }
+
+    .video-player img {
+        margin: 20px 0px 25px;
+    }
+
+    .player-button {
+        height: 5px;
+        padding: 5px;
+        justify-content: flex-end;
+    }
+
+    .player-slider {
+        width: 5px;
+        height: 10px;
+    }
+
+    input[type=range] {
+        display: none;
+    }
+
+
+    .number-text {
+        display: none;
+    }
+
+    .all-buttons-play {
+        align-items: flex-end;
+    }
+
+    .play-hover {
+        width: 50px;
+    }
+
+    .noInform {
+        display: none;
+    }
+
+    .price-item {
+        margin: 10px 20px 15px;
+    }
+
+    input,
+    textarea {
+        width: 280px;
+    }
+}
