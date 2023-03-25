@@ -53,9 +53,9 @@ function animateButton(e) {
     setTimeout(function() {
         e.target.classList.remove('animate');
     }, 50);
-};
+}
 
-for (var i = 0; i < bubblyButtons.length; i++) {
+for (let i = 0; i < bubblyButtons.length; i++) {
     bubblyButtons[i].addEventListener('click', animateButton, false);
 }
 
@@ -78,6 +78,7 @@ portfolioBtnAutumn.addEventListener('click', () => {
     portfolioImage4.src = "./assets/img/Autumn/4.jpg";
     portfolioImage5.src = "./assets/img/Autumn/5.jpg";
     portfolioImage6.src = "./assets/img/Autumn/6.jpg";
+    portfolioBtnAutumn.classList.add('active');
 });
 portfolioBtnSummer.addEventListener('click', () => {
     portfolioImage1.src = "./assets/img/Summer/1.jpg";
@@ -86,6 +87,7 @@ portfolioBtnSummer.addEventListener('click', () => {
     portfolioImage4.src = "./assets/img/Summer/4.jpg";
     portfolioImage5.src = "./assets/img/Summer/5.jpg";
     portfolioImage6.src = "./assets/img/Summer/6.jpg";
+    portfolioBtnSummer.classList.add('active');
 });
 portfolioBtnWinter.addEventListener('click', () => {
     portfolioImage1.src = "./assets/img/Winter/1.jpg";
@@ -94,6 +96,7 @@ portfolioBtnWinter.addEventListener('click', () => {
     portfolioImage4.src = "./assets/img/Winter/4.jpg";
     portfolioImage5.src = "./assets/img/Winter/5.jpg";
     portfolioImage6.src = "./assets/img/Winter/6.jpg";
+    portfolioBtnWinter.classList.add('active');
 });
 portfolioBtnSpring.addEventListener('click', () => {
     portfolioImage1.src = "./assets/img/Spring/1.jpg";
@@ -102,6 +105,7 @@ portfolioBtnSpring.addEventListener('click', () => {
     portfolioImage4.src = "./assets/img/Spring/4.jpg";
     portfolioImage5.src = "./assets/img/Spring/5.jpg";
     portfolioImage6.src = "./assets/img/Spring/6.jpg";
+    portfolioBtnSpring.classList.add('active');
 });
 
 //Add video-player
@@ -146,7 +150,7 @@ controlFullScreen.addEventListener('click', (e) => {
     console.dir(playerVideo);
     if (playerVideo.webkitSupportsFullscreen) {
         playerVideo.webkitEnterFullScreen()
-    };
+    }
 });
 
 controlProgress.addEventListener('mouseover', function() { drag = true });
@@ -168,8 +172,9 @@ let progression;
 function changeVolume() {
     if (playerVideo.muted) {
         playerVideo.muted = false;
+        controlVolumeSlider.value = 0.5;
         controlVolume.style.backgroundImage = "url('./assets/svg/video-volume.svg')";
-    } else {
+    } else  {
         playerVideo.muted = true;
         controlVolumeSlider.value = 0;
         controlVolume.style.backgroundImage = "url('./assets/svg/video-mute.svg')";
@@ -187,7 +192,7 @@ function toggleVideo() {
         playerVideo.pause();
         controlPlay.style.backgroundImage = "url('./assets/svg/video-play.svg')";
         clearInterval(progression);
-    };
+    }
 }
 
 function forward() {
@@ -204,7 +209,7 @@ function updateCurrentPos(e) {
     // offset of the progress bar / video wrapper width
     const newProgress = ((e.clientX - allPlayer.offsetLeft) / allPlayer.clientWidth) * playerVideo.duration;
     playerVideo.currentTime = newProgress;
-};
+}
 
 function getColorProgress() {
     value = this.value;
