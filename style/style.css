@@ -1140,9 +1140,9 @@ textarea {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
     .container {
-        max-width: 320px;
+        max-width: 360px;
     }
 
     .icon {
